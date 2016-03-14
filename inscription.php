@@ -15,10 +15,6 @@
         <script src="js/jquery.min.js"></script>
     </head>
     <body>
-    	<?php
-        require('classes/Database.php');
-        require('classes/Utilisateur.php');
-        ?>
         <div class="container-fluid">
         	<div class="row">
         		<div class="col-md-10"><img src="photos/logo.jpeg" class="img-rounded" alt="Logo" height="100" width="150"></div>

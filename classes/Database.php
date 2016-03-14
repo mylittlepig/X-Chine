@@ -19,9 +19,9 @@ class Database{
 
 
 //opration sur la base
-$dbh = Database::connect();
-var_dump($dbh);
+// $dbh = Database::connect();
+// var_dump($dbh);
 // Utilisateur::insererUtilisateur('sunquan','SUN','Sun','Quan','2005','1980-03-27','quan.sun@polytechnique.edu','modal.css');
 
-$dbh = NULL;
+// $dbh = NULL;
 ?>

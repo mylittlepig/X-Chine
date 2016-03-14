@@ -15,10 +15,6 @@
         <script src="js/jquery.min.js"></script>
     </head>
     <body>
-       <?php
-        require('classes/Database.php');
-        require('classes/Utilisateur.php');
-        ?>
         <div class="container-fluid">
         	<div class="row">
         		<div class="col-md-10"><img src="photos/logo.jpeg" class="img-rounded" alt="Logo" height="100" width="150"></div>
@@ -28,18 +24,19 @@
         	<div class="row">
         		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">Accueil</a></div>
         		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">Événements</a></div>
-        		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">Informations</a></div>
-        		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">Annuaires</a></div>
+        		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="information.php" class="text-primary">Informations</a></div>
+        		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="annuaires.php" class="text-primary">Annuaires</a></div>
+        		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">Échange</a></div>
         		<div class="col-md-1" style="border:1px; padding:5px;margin:5px"><a href="#" class="text-primary">About us</a></div>
-        		<div class="col-md-5" style="border:1px; padding:5px;margin:5px">
+        		<div class="col-md-4" style="border:1px; padding:5px;margin:5px">
         			<?php
-  					if(isset($_POST["email"]) && $_POST["email"] != "" && isset($_POST["mdp"]) && isset($_POST["mdp"]) != "") {
+  					if(isset($_POST["login"]) && $_POST["login"] != "" && isset($_POST["mdp"]) && isset($_POST["mdp"]) != "") {
 
   					} else {
   					?>
         			<form action="index.php?todo=login" method="post">
-        				Email:<input type="email" name="email" size="18" placeholder="@polytechnique.edu" required/>
-        				Mot de passe:<input type="text" name="mdp" size="15" required/>
+        				Login:<input type="text" name="login" size="12" required/>
+        				Mot de passe:<input type="text" name="mdp" size="12" required/>
         				<input type="submit" value="Valider"/>
         			</form>
         			<?php 
